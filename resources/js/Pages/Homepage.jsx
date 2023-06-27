@@ -6,7 +6,7 @@ import { Link, Head } from '@inertiajs/react';
 export default function Homepage(props) {
     return (
         <div className='min-h-screen bg-slate-50'>
-            <Navbar />
+            <Navbar user={props.auth.user} />
             <Head title={props.title} />
             <div className='flex justify-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch items-center gap-4 p-4'>
                 <Newslist news={props.news.data} />
